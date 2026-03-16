@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Valentine</title>
+
+<style>
+body{
+    font-family: Arial;
+    background: linear-gradient(to right,#66052e,#fff);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.box{
+    background:rgb(174, 199, 233);
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(135, 31, 31, 0.2);
+}
+
+button{
+    padding:10px 25px;
+    border:none;
+    border-radius:8px;
+    margin:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+#yes{
+    background:rgb(198, 47, 47);
+    color:white;
+}
+
+#no{
+    background:#86cb75;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box" id="main">
+<h1>Sunil, <br>will you be my Valentine? 💖 </h1>
+
+<button id="yes" title="Good choice">YES</button>
+<button id="no">NO</button>
+
+</div>
+
+<script>
+
+let no = document.getElementById("no");
+
+no.addEventListener("mouseover", function(){
+
+let x = Math.random()*300;
+let y = Math.random()*300;
+
+no.style.position="absolute";
+no.style.left=x+"px";
+no.style.top=y+"px";
+
+});
+
+document.getElementById("yes").onclick=function(){
+
+document.getElementById("main").innerHTML=`
+
+<h1>💖 YAY!!! 💖</h1>
+<p>Best decision ever 😘</p>
+
+
+<img src="https://wallpapers.com/images/hd/love-cartoon-many-hearts-wre3qfckol0hqkbu.jpg" width="200">
+
+<p>I LOVE YOU ❤️</p><br>
+<p>sulululu</p>
+
+`;
+
+}
+
+</script>
+
+</body>
+</html>
